@@ -1,0 +1,39 @@
+.header{
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  padding-top: 20px;
+  background-color: gray;
+  &__logo{
+    width: 100px;
+    height: 60px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  &__search-box{
+    width: calc(100vw - 280px);
+    height: 60px;
+    background-color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  &__post-btn{
+    width: 100px;
+    height: 60px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+}
