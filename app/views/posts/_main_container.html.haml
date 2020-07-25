@@ -1,5 +1,6 @@
 .contents-list
-  .content-list__post-box
+  .contents-list__post-box
     - @posts.each do |post|
-      = image_tag post.image
-      = post.text
+      .contents-list__post-box__new-post{style: "background-image: url( = post.image );"}
+        .contents-list__post-box__new-post__text
+          = post.text
