@@ -2,6 +2,7 @@
   .contents-list__post-box
     - @posts.each do |post|
       .contents-list__post-box__new-post
-        = image_tag post.image.url
+        .contents-list__post-box__new-post__image
+          = image_tag post.image.url
         .contents-list__post-box__new-post__text
           = post.text
