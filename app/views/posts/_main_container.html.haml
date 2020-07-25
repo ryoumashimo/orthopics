@@ -1,4 +1,5 @@
 .contents-list
   .content-list__post-box
     - @posts.each do |post|
-      =post.image
+      = image_tag post.image
+      = post.text
