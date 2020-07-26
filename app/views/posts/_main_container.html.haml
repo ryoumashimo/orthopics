@@ -3,6 +3,6 @@
     - @posts.each do |post|
       .contents-list__post-box__new-post
         .contents-list__post-box__new-post__image
-          = image_tag post.image.url
+          = image_tag post.image.url, class: "post-image"
         .contents-list__post-box__new-post__text
           = post.text
