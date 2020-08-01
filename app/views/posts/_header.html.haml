@@ -3,5 +3,9 @@
     = link_to "LOGO", root_path
   .header__search-box
     検索
+  .header__user-name
+    = link_to current_user.name, user_path(current_user.id)
+  .header__log-out
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
   .header__post-btn
     = link_to "投稿する", new_post_path
