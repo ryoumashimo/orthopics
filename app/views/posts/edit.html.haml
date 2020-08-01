@@ -1,0 +1,10 @@
+.form-container
+  .form-container__post-form
+    %h3 編集する
+    = form_with model: @post, local: true do |form|
+      .image-form
+        = form.file_field :image
+      .text-form
+        = form.text_area :text
+      .input-form
+        = form.submit "Send"

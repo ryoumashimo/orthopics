@@ -7,4 +7,5 @@
       = simple_format(@post.text, class: "main-wrapper__post-detail__text-box__text")
       .main-wrapper__post-detail__text-box__time
         = @post.created_at
+      = link_to "編集する", "/posts/#{@post.id}/edit", method: :get, class: "main-wrapper__post-detail__update"
       = link_to "削除する", "/posts/#{@post.id}", method: :delete, class: "main-wrapper__post-detail__destroy"
