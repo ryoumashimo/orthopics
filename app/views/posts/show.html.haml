@@ -1,0 +1,5 @@
+= render "header"
+= image_tag @post.image.url
+= simple_format @post.text
+= @post.created_at
+= link_to "削除する", "/posts/#{@post.id}", method: :delete
