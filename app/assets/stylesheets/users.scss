@@ -1,3 +1,36 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-name{
+  padding-top: 100px;
+  color: black;
+  height: 50px;
+  width: 100vw;
+}
+.contents-list{
+  width: 100vw;
+  height: 100vh;
+  &__post-box{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    &__new-post{
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 0 20px 20px 0;
+      padding: 20px;
+      width: calc(33.333333% - 20px);
+      height: 300px;
+      &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &__text{
+        width: 100%;
+        height: 50px;
+        background-color: white;
+      }
+    }
+  }
+}
