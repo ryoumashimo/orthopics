@@ -14,6 +14,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
 
   def destroy
@@ -29,6 +31,10 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.update(post_params)
     redirect_to root_path
+  end
+
+  def search
+    @posts = Post.search(params[:keyword])
   end
 
   private

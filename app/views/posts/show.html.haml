@@ -10,3 +10,13 @@
       - if user_signed_in? && current_user.id == @post.user_id
         = link_to "編集する", "/posts/#{@post.id}/edit", method: :get, class: "main-wrapper__post-detail__update"
         = link_to "削除する", "/posts/#{@post.id}", method: :delete, class: "main-wrapper__post-detail__destroy"
+      .main-wrapper__post-detail__text-box__comment-box
+        .main-wrapper__post-detail__text-box__comment-list
+          - if @comments
+            - @comments.each do |comment|
+              = link_to comment.user.name, "/users/#{comment.user_id}"
+              = comment.text
+        .main-wrapper__post-detail__text-box__comment-form
+          = form_with model: [@post, @comment], local: true do |form|
+            = form.text_area :text, placeholder: "コメントする", row: "2"
+            = form.submit "SEND"
