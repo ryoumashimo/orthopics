@@ -1,9 +1,11 @@
 = render "posts/header"
-= @name
-さんの投稿一覧
 
-- @posts.each do |post|
-  .contents-list__post-box__new-post
-    = link_to image_tag(post.image.url, class: "contents-list__post-box__new-post__image"), post_path(post.id)
-    .contents-list__post-box__new-post__text
-      = post.text
+.contents-list
+  .user-name
+  = "#{@name}さんの投稿一覧"
+  .contents-list__post-box
+    - @posts.each do |post|
+      .contents-list__post-box__new-post
+        = link_to image_tag(post.image.url, class: "contents-list__post-box__new-post__image"), post_path(post.id)
+        .contents-list__post-box__new-post__text
+          = post.text
