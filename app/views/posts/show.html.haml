@@ -1,9 +1,13 @@
 = render "header"
 .main-wrapper
+  = link_to posts_path, class: "back-btn" do
+    = icon('fas', 'angle-double-left')
+    %h1 戻る
   .main-wrapper__post-detail
     .main-wrapper__post-detail__image
       = image_tag(@post.image.url, class: "photo")
     .main-wrapper__post-detail__text-box
+      = link_to @post.user.name, "/users/#{@post.user_id}", class: "post-user-name"
       = simple_format(@post.text, class: "main-wrapper__post-detail__text-box__text")
       .main-wrapper__post-detail__text-box__time
         = @post.created_at
@@ -11,12 +15,13 @@
         = link_to "編集する", "/posts/#{@post.id}/edit", method: :get, class: "main-wrapper__post-detail__update"
         = link_to "削除する", "/posts/#{@post.id}", method: :delete, class: "main-wrapper__post-detail__destroy"
       .main-wrapper__post-detail__text-box__comment-box
-        .main-wrapper__post-detail__text-box__comment-list
+        %h1 【コメント】
+        .main-wrapper__post-detail__text-box__comment-box__list
           - if @comments
             - @comments.each do |comment|
-              = link_to comment.user.name, "/users/#{comment.user_id}"
+              = link_to comment.user.name, "/users/#{comment.user_id}", class: "user-name"
               = comment.text
         .main-wrapper__post-detail__text-box__comment-form
-          = form_with model: [@post, @comment], local: true do |form|
-            = form.text_area :text, placeholder: "コメントする", row: "2"
-            = form.submit "SEND"
+          = form_with model: [@post, @comment], class: "form", local: true do |form|
+            = form.text_area :text, placeholder: "コメントする", class: "input-box", row: "2"
+            = form.submit "送信", class: "send-btn"

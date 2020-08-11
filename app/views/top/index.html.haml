@@ -1,0 +1,12 @@
+= render "posts/header"
+
+.top-content
+  .top-content__main-container
+    %h1 orthopics
+    %p 歯科矯正専用のSNS
+    - if user_signed_in?
+      = link_to "投稿する", new_post_path, class: "post-btn"
+      = link_to "投稿をみる", posts_path, class: "post-btn"
+    - else
+      = link_to "サインイン", new_user_session_path, class: "post-btn"
+      = link_to "投稿をみる", new_user_registration_path, class: "post-btn"
