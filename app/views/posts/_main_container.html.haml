@@ -1,7 +1,6 @@
 .contents-list
+  
   .contents-list__post-box
     - @posts.each do |post|
       .contents-list__post-box__new-post
         = link_to image_tag(post.image.url, class: "contents-list__post-box__new-post__image"), post_path(post.id)
-        .contents-list__post-box__new-post__text
-          = post.text

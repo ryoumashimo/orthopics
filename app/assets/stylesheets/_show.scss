@@ -2,15 +2,28 @@
   height: 100vh;
   width: 100vw;
   padding-top: 100px;
+  background-color: #e9e5e5;
+  .back-btn{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2b5566;
+    margin-left: 100px;
+    font-size: 15px;
+  }
+  .back-btn:hover{
+    opacity: 0.5;
+  }
   &__post-detail{
     margin: 0 auto;
-    margin-top: 50px;
-    height: 500px;
+    height: 600px;
     width: 900px;
     border: 1px solid gray;
     display: flex;
+    background-color: #fff;
     &__image{
-      height: 500px;
+      height: 600px;
       width: 600px;
       border-right: 1px solid gray;
       position: relative;
@@ -28,14 +41,87 @@
       }
     }
     &__text-box{
+      .post-user-name{
+        display: inline-block;
+        text-decoration: none;
+        color: #1f1d1d;
+        font-weight: bold;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid gray;
+        padding-left: 10px;
+      }
       &__text{
-        height: 300px;
+        display: inline-block;
+        height: 270px;
         width: 250px;
         margin: 0 auto;
+        text-decoration: none;
+        padding-left: 10px;
       }
       &__time{
-
+        padding-left: 10px;
+      }
+      &__comment-box{
+        &__list{
+          border-bottom: 1px solid gray;
+          height: 150px;
+          overflow: auto;
+          h1{
+            width: 100%;
+            font-weight: bold;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+          }
+          .user-name{
+            display: inline-block;
+            text-decoration: none;
+          }
+        }
+      }
+      &__comment-form{
+        width: 100%;
+        height: 70px;
+        .form{
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          margin-left: 10px;
+          .input-box{
+            display: inline-block;
+            width: 280px;
+            height: 30px;
+            line-height: 30px;
+            align-items: center;
+          }
+          .send-btn{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+          }
+        }
       }
     }
+    &__update{
+      display: inline-block;
+      text-decoration: none;
+      color: #2b5566;
+      padding-left: 10px;
+    }
+    &__destroy{
+      display: inline-block;
+      text-decoration: none;
+      color: #2b5566;
+      padding-left: 10px;
+    }
+    
+  }
+  .user-name{
+    display: block;
+    text-decoration: none;
+    color: #1f1d1d;
+    font-weight: bold;
   }
 }
