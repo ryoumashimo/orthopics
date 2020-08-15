@@ -1,11 +1,12 @@
 = render "header"
 .form-container
   .form-container__post-form
-    %h3 投稿する
+    %h2 新規投稿
     = form_with model: @post, local: true do |form|
-      .image-form
-        = form.file_field :image
+      =form.label :image, class: "image-form" do
+        = icon('fas', 'camera')
+        %h3 選択
+        = form.file_field :image, class: "image-icon"
       .text-form
-        = form.text_area :text
-      .input-form
-        = form.submit "Send"
+        = form.text_area :text, class: "text-box"
+        = form.submit "投稿する", class: "send-btn"

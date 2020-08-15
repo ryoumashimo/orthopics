@@ -3,9 +3,50 @@
 }
 .form-container{
   padding-top: 100px;
+  width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
   &__post-form{
-    h3{
-    
+    margin-top: 100px;
+    height: 500px;
+    width: 1000px;
+    border: solid 1px black;
+    padding: 50px;
+    background-color: #ccd4e2;
+    h2{
+      font-size: 30px;
+      color: #003366;
+    }
+    .image-form{
+      width: 100px;
+      background-color: #0099ccdc;
+      color: #fff;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-top: 30px;
+      h3{
+        margin-left: 5px;
+      }
+      .image-icon{
+        display: none;
+      }
+    }
+    .image-form:hover{
+      opacity: 0.5;
+    }
+    .text-form{
+      margin-top: 50px;
+      .text-box{
+        display: inline-block;
+        width: 500px;
+        height: 100px;
+      }
+      .send-btn{
+        display: inline-block;
+      }
     }
   }
 }
