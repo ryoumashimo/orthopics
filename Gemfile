@@ -67,9 +67,6 @@ gem 'devise'
 gem 'carrierwave'
 
 group :production do
-<<<<<<< Updated upstream
   gem 'unicorn', '5.4.1'
-=======
   gem 'pg'
->>>>>>> Stashed changes
 end
