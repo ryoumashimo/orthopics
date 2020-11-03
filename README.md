@@ -1,28 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 名前
+orthopics
 
-Things you may want to cover:
+## 概要
+歯科矯正専用の掲示板アプリ
+Orthodontics（歯科矯正） ＋ Picture（写真）
 
-* Ruby version
+## 作成の背景
+現職では、ヘルスケア関連の部署にいるため、歯科医院とのお付き合いが専門でした。
+そこで矯正市場について調べる機会があり、非常に伸びていることを知りました。
+しかし、歯科矯正のイメージはあまりよくないのです。
+・目立つ。。。
+・痛そう。。。
+・面倒臭い。。。
+・ずっとつけているのが苦痛
+・長い時間がかかる。。。
+などなど
+そこで、上記を解決できるアプリの作成を考えました。
 
-* System dependencies
+## 用途
+下記よりアクセスしてください。
+https://orthopics.herokuapp.com
+歯科矯正をしている最中の歯並びの写真やどんな装置をつけているのか、どのように歯並びが変化しているのかを投稿することができます。
+投稿は写真をメインに文章も追加することができます。
+投稿へのコメントも可能で、使用者同士のコミュニケーションが可能です。
+投稿の検索もでき、気になる矯正方法や悩みなどを過去の投稿の中から探すことができます。
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+# DB
 ## usersテーブル
 
 |Column|Type|Options|
